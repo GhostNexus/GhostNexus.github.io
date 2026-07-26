@@ -337,6 +337,20 @@ main { flex: 1 0 auto; }
 .ph--square { aspect-ratio: 1 / 1; }
 .ph--portrait { aspect-ratio: 3 / 4; }
 
+/* ---------- Real photos ---------- */
+.frame {
+  width: 100%;
+  display: block;
+  object-fit: cover;
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  background: var(--bg-card);
+}
+.frame--portrait { aspect-ratio: 4 / 5; object-position: 50% 42%; }
+.frame--square   { aspect-ratio: 1 / 1;  object-position: 50% 38%; }
+.frame--wide     { aspect-ratio: 3 / 2;  object-position: 50% 38%; }
+.about-strip__media img.frame { max-width: 420px; }
+
 /* ---------- Home: about strip ---------- */
 .about-strip { display: grid; grid-template-columns: 1fr; gap: clamp(2rem, 5vw, 4rem); align-items: center; }
 .about-strip__media .ph { aspect-ratio: 3 / 4; max-width: 420px; }
