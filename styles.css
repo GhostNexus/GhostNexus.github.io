@@ -386,8 +386,24 @@ main { flex: 1 0 auto; }
 .resume-table { width: 100%; border-collapse: collapse; }
 .resume-table tr { border-bottom: 1px solid var(--border); }
 .resume-table td { padding: 0.85rem 0; vertical-align: top; color: var(--text-muted); }
-.resume-table td:first-child { color: var(--text); font-weight: 500; width: 40%; padding-right: 1rem; }
-.resume-table td:last-child { text-align: right; color: var(--text-faint); font-size: 0.9rem; white-space: nowrap; }
+.resume-table td:first-child { color: var(--text); font-weight: 500; width: 32%; padding-right: 1rem; }
+.resume-table td:nth-child(2) { width: 34%; padding-right: 1rem; }
+.resume-table td:last-child { text-align: right; color: var(--text-faint); font-size: 0.85rem; }
+
+/* Stats row */
+.stat-row { display: flex; flex-wrap: wrap; gap: 1.75rem; margin-bottom: 2.75rem; color: var(--text-muted); font-size: 0.98rem; }
+.stat-row strong {
+  color: var(--gold); font-weight: 600; font-size: 0.72rem; letter-spacing: 0.16em;
+  text-transform: uppercase; margin-right: 0.5rem;
+}
+
+/* Resume tables stack on small screens */
+@media (max-width: 640px) {
+  .resume-table td { display: block; width: auto; padding: 0; }
+  .resume-table tr { padding: 0.85rem 0; }
+  .resume-table td:nth-child(2) { color: var(--gold); font-size: 0.9rem; margin-top: 0.15rem; }
+  .resume-table td:last-child { text-align: left; margin-top: 0.2rem; }
+}
 .skills-list { display: flex; flex-wrap: wrap; gap: 0.6rem; }
 .skills-list li {
   border: 1px solid var(--border-strong);
